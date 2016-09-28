@@ -15,10 +15,10 @@ RUN apt-get -y install \
     zip \
     unzip > /dev/null 2>&1
 
-RUN composer global require phpunit/phpunit > /dev/null 2>&1 && \
-    composer global require squizlabs/php_codesniffer > /dev/null 2>&1 && \
-    composer global require fabpot/php-cs-fixer > /dev/null 2>&1 && \
-    composer global require phpmd/phpmd > /dev/null 2>&1
+RUN composer global require \
+    phpunit/phpunit \
+    squizlabs/php_codesniffer \
+    fabpot/php-cs-fixer \
+    phpmd/phpmd > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
-
