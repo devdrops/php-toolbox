@@ -2,6 +2,8 @@
 
 A Docker image designed for PHP developers that care about code quality.
 
+Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdrops/php-toolbox/).
+
 ## Features
 
 * PHP 7.0.11
