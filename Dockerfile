@@ -18,7 +18,7 @@ RUN apt-get -y install \
 RUN composer global require \
     phpunit/phpunit \
     squizlabs/php_codesniffer \
-    fabpot/php-cs-fixer \
+    friendsofphp/php-cs-fixer \
     phpmd/phpmd > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1

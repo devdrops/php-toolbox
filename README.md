@@ -10,7 +10,7 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 * Composer
 * phpunit/phpunit
 * squizlabs/php_codesniffer
-* fabpot/php-cs-fixer
+* friendsofphp/php-cs-fixer
 * phpmd/phpmd
 
 ## Install
