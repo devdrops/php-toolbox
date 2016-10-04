@@ -1,5 +1,7 @@
 # Docker/PHP-Toolbox
 
+[![](https://images.microbadger.com/badges/version/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own version badge on microbadger.com")
+
 A Docker image designed for PHP developers that care about code quality.
 
 Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdrops/php-toolbox/).
