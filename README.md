@@ -29,7 +29,7 @@ All tools can be acessed by executing:
 # Run the image on interactive mode
 docker run -it \
 	# Creates a volume on the current path
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     # and define it as the workdir
     -w /toolbox \
     # The image itself :)
@@ -55,7 +55,7 @@ All the commands below will be executed from the project's root folder, `my-proj
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     php -v
@@ -65,7 +65,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     composer install
@@ -75,7 +75,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     phpunit --version
@@ -85,7 +85,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     phpcs --standard=PSR2 Abstract.php
@@ -95,7 +95,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     php-cs-fixer fix Abstract.php
@@ -105,7 +105,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-    -v $(pwd)/toolbox \
+    -v $(pwd):/toolbox \
     -w /toolbox \
     devdrops/php-toolbox \
     phpmd Abstract.php text codesize
