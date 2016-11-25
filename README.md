@@ -14,6 +14,7 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 * squizlabs/php_codesniffer
 * friendsofphp/php-cs-fixer
 * phpmd/phpmd
+* behat/behat
 
 ## Install
 
@@ -111,3 +112,12 @@ docker run -it \
     phpmd Abstract.php text codesize
 ```
 
+### Behat
+
+```bash
+docker run -it \
+    -v $(pwd):/toolbox \
+    -w /toolbox \
+    devdrops/php-toolbox \
+    behat --version
+```
