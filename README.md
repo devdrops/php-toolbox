@@ -27,14 +27,7 @@ docker pull devdrops/php-toolbox
 All tools can be acessed by executing:
 
 ```bash
-# Run the image on interactive mode
-docker run -it \
-	# Creates a volume on the current path
-    -v $(pwd):/toolbox \
-    # and define it as the workdir
-    -w /toolbox \
-    # The image itself :)
-    devdrops/php-toolbox
+make run COMMAND='your_instruction_here'
 ```
 
 ## Examples
@@ -55,69 +48,41 @@ All the commands below will be executed from the project's root folder, `my-proj
 ### PHP
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    php -v
+make run COMMAND='php -v'
 ```
 
 ### Composer
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    composer install
+make run COMMAND='composer install'
 ```
 
 ### PHPUnit
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    phpunit --version
+make run COMMAND='phpunit --version'
 ```
 
 ### PHP_CodeSniffer
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    phpcs --standard=PSR2 Abstract.php
+make run COMMAND='phpcs --standard=PSR2 Abstract.php'
 ```
 
 ### PHP CS Fixer
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    php-cs-fixer fix Abstract.php
+make run COMMAND='php-cs-fixer fix Abstract.php'
 ```
 
 ### PHP Mess Detector
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    phpmd Abstract.php text codesize
+make run COMMAND='phpmd Abstract.php text codesize'
 ```
 
 ### Behat
 
 ```bash
-docker run -it \
-    -v $(pwd):/toolbox \
-    -w /toolbox \
-    devdrops/php-toolbox \
-    behat --version
+make run COMMAND='behat --version'
 ```
