@@ -12,7 +12,7 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 |:---|:------|
 |PHP|PHP 7.1.0 (cli) (built: Dec  6 2016 21:22:14) ( NTS )|
 |Composer|Composer version 1.3.2 2017-01-27 18:23:41|
-|phpunit/phpunit|PHPUnit 5.7.9 by Sebastian Bergmann and contributors.|
+|phpunit/phpunit|PHPUnit 6.0.5 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 2.8.0 (stable) by Squiz (http://www.squiz.net)|
 |friendsofphp/php-cs-fixer|PHP CS Fixer 2.0.0 by Fabien Potencier and Dariusz Ruminski|
 |phpmd/phpmd|PHPMD 2.6.0|
