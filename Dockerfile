@@ -14,13 +14,15 @@ LABEL org.label-schema.name="Docker/PHP-Toolbox" \
 RUN curl --silent https://getcomposer.org/installer | php > /dev/null 2>&1 && \
     mv ./composer.phar /usr/local/bin/composer > /dev/null 2>&1
 
-RUN apt-get update > /dev/null 2>&1
-RUN apt-get -y install \
-    vim \
-    curl \
-    git \
-    zip \
-    unzip > /dev/null 2>&1
+RUN apt-get update > /dev/null 2>&1 && \
+    apt-get -y install \
+        vim \
+        curl \
+        git \
+        zip \
+        unzip > /dev/null 2>&1 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 RUN composer global require \
     phpunit/phpunit \
@@ -30,5 +32,3 @@ RUN composer global require \
     behat/behat > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
-
-RUN rm -rf /var/lib/apt/lists/*
