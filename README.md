@@ -17,6 +17,7 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 |friendsofphp/php-cs-fixer|PHP CS Fixer 2.10.0 Bowling Bear by Fabien Potencier and Dariusz Ruminski|
 |phpmd/phpmd|PHPMD 2.6.0|
 |behat/behat|behat 3.4.3|
+|phploc/phploc|phploc 4.0.1 by Sebastian Bergmann.|
 
 ## Install
 
@@ -88,3 +89,10 @@ make run COMMAND='phpmd Abstract.php text codesize'
 ```bash
 make run COMMAND='behat --version'
 ```
+
+### phploc
+
+```bash
+make run COMMAND='phploc --version'
+```
+

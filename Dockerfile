@@ -16,7 +16,6 @@ RUN curl --silent https://getcomposer.org/installer | php > /dev/null 2>&1 && \
 
 RUN apt-get update > /dev/null 2>&1 && \
     apt-get -y install \
-        vim \
         curl \
         git \
         zip \
@@ -29,6 +28,7 @@ RUN composer global require \
     squizlabs/php_codesniffer \
     friendsofphp/php-cs-fixer \
     phpmd/phpmd \
-    behat/behat > /dev/null 2>&1
+    behat/behat \
+    phploc/phploc > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
