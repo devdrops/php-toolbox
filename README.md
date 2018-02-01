@@ -11,12 +11,12 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 7.1.4 (cli) (built: Apr 25 2017 03:19:44) ( NTS )|
-|Composer|Composer version 1.4.1 2017-03-10 09:29:45|
-|phpunit/phpunit|PHPUnit 6.1.3 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.0.0 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 2.3.1 by Fabien Potencier and Dariusz Ruminski|
+|Composer|Composer version 1.6.3 2018-01-31 16:28:17|
+|phpunit/phpunit|PHPUnit 6.5.5 by Sebastian Bergmann and contributors.|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.2.2 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 2.10.0 Bowling Bear by Fabien Potencier and Dariusz Ruminski|
 |phpmd/phpmd|PHPMD 2.6.0|
-|behat/behat|behat 3.3.0|
+|behat/behat|behat 3.4.3|
 
 ## Install
 
