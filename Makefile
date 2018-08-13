@@ -1,11 +1,15 @@
-.PHONY: run
+.PHONY: build run
 
-MAKEPATH := $(abspath $(lastword $(MAKEFILE_LIST)))
-PWD := $(dir $(MAKEPATH))
+build: SHELL := /bin/bash
+build:
+	docker build \
+		--build-arg VCS_REF=$(VCS_REF) \
+		--build-arg BUILD_DATE=$(BUILD_DATE) \
+		-t devdrops/php-toolbox:$(TAG) .
 
 run:
 	docker run -it \
-		-v $(PWD):/toolbox \
+		-v $(CURDIR):/toolbox \
 		-w /toolbox \
 		devdrops/php-toolbox \
 		$(COMMAND)

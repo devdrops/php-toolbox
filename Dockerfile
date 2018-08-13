@@ -1,4 +1,4 @@
-FROM php:7.1-cli
+FROM php:7.2-cli
 
 MAINTAINER Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>
 
