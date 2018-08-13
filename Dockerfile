@@ -29,6 +29,7 @@ RUN composer global require \
     friendsofphp/php-cs-fixer \
     phpmd/phpmd \
     behat/behat \
-    phploc/phploc > /dev/null 2>&1
+    phploc/phploc \
+    phpstan/phpstan > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
