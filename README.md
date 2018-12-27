@@ -10,15 +10,15 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 7.2.8 (cli) (built: Jul 21 2018 07:47:51) ( NTS )|
-|Composer|Composer version 1.7.1 2018-08-07 09:39:23|
-|phpunit/phpunit|PHPUnit 7.3.1 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.3.1 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 2.12.2 Long Journey by Fabien Potencier and Dariusz Ruminski|
+|PHP|PHP 7.3.0 (cli) (built: Dec 29 2018 04:30:37) ( NTS )|
+|Composer|Composer version 1.8.0 2018-12-03 10:31:16|
+|phpunit/phpunit|PHPUnit 7.5.1 by Sebastian Bergmann and contributors.|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.4.0 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 2.14.0 Sunrise by Fabien Potencier and Dariusz Ruminski|
 |phpmd/phpmd|PHPMD 2.6.0|
 |behat/behat|behat 3.5.0|
 |phploc/phploc|phploc 4.0.1 by Sebastian Bergmann.|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.10.3|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.10.7|
 
 ## Install
 
@@ -28,8 +28,12 @@ docker pull devdrops/php-toolbox
 
 ## Build it!
 
+First, clone this repo. Then, navigate to it's root source.
+
+For development:
+
 ```bash
-make build TAG=latest VCS_REF=`git rev-parse HEAD` BUILD_DATE=`date --rfc-3339=ns | sed 's/ /T/'`
+./develop
 ```
 
 ## Usage
@@ -37,8 +41,10 @@ make build TAG=latest VCS_REF=`git rev-parse HEAD` BUILD_DATE=`date --rfc-3339=n
 All tools can be acessed by executing:
 
 ```bash
-make run COMMAND='your_instruction_here'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest CHOOSEN_BINARY
 ```
+
+Where `CHOOSEN_BINARY` is the binary you're looking for :wink:
 
 ## Examples
 
@@ -58,48 +64,53 @@ All the commands below will be executed from the project's root folder, `my-proj
 ### PHP
 
 ```bash
-make run COMMAND='php -v'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest php -v
 ```
 
 ### Composer
 
 ```bash
-make run COMMAND='composer install'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest composer install
 ```
 
 ### PHPUnit
 
 ```bash
-make run COMMAND='phpunit --version'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest phpunit --version
 ```
 
 ### PHP_CodeSniffer
 
 ```bash
-make run COMMAND='phpcs --standard=PSR2 Abstract.php'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest phpcs --standard=PSR2 Abstract.php
 ```
 
 ### PHP CS Fixer
 
 ```bash
-make run COMMAND='php-cs-fixer fix Abstract.php'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest php-cs-fixer fix Abstract.php
 ```
 
 ### PHP Mess Detector
 
 ```bash
-make run COMMAND='phpmd Abstract.php text codesize'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest phpmd Abstract.php text codesize
 ```
 
 ### Behat
 
 ```bash
-make run COMMAND='behat --version'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest behat --version
 ```
 
 ### phploc
 
 ```bash
-make run COMMAND='phploc --version'
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest phploc --version
 ```
 
+### phpstan
+
+```bash
+docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest phpstan --version
+```

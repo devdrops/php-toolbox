@@ -1,11 +1,10 @@
-FROM php:7.2-cli
-
-MAINTAINER Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>
+FROM php:latest
 
 ARG VCS_REF
 ARG BUILD_DATE
 
-LABEL org.label-schema.name="Docker/PHP-Toolbox" \
+LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
+      org.label-schema.name="DevDrops/PHP-Toolbox" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/devdrops/php-toolbox" \
