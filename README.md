@@ -10,15 +10,15 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 7.3.0 (cli) (built: Dec 29 2018 04:30:37) ( NTS )|
+|PHP|PHP 7.3.1 (cli) (built: Dec 29 2018 04:30:37) ( NTS )|
 |Composer|Composer version 1.8.0 2018-12-03 10:31:16|
-|phpunit/phpunit|PHPUnit 7.5.1 by Sebastian Bergmann and contributors.|
+|phpunit/phpunit|PHPUnit 7.5.2 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 3.4.0 (stable) by Squiz (http://www.squiz.net)|
 |friendsofphp/php-cs-fixer|PHP CS Fixer 2.14.0 Sunrise by Fabien Potencier and Dariusz Ruminski|
 |phpmd/phpmd|PHPMD 2.6.0|
 |behat/behat|behat 3.5.0|
 |phploc/phploc|phploc 4.0.1 by Sebastian Bergmann.|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.10.7|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.11.1|
 
 ## Install
 
