@@ -18,8 +18,11 @@ RUN apt-get update > /dev/null 2>&1 && \
         curl \
         git \
         zip \
-        unzip > /dev/null 2>&1 && \
+        unzip \
+        zlib1g-dev \
+        libzip-dev > /dev/null 2>&1 && \
     apt-get clean && \
+    docker-php-ext-install zip && \
     rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 RUN composer global require \
