@@ -26,12 +26,13 @@ RUN apt-get update > /dev/null 2>&1 && \
     rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
 
 RUN composer global require \
-    phpunit/phpunit \
-    squizlabs/php_codesniffer \
-    friendsofphp/php-cs-fixer \
-    phpmd/phpmd \
-    behat/behat \
-    phploc/phploc \
-    phpstan/phpstan > /dev/null 2>&1
+        phpunit/phpunit \
+        squizlabs/php_codesniffer \
+        friendsofphp/php-cs-fixer \
+        phpmd/phpmd \
+        behat/behat \
+        phploc/phploc \
+        phpstan/phpstan \
+        icanhazstring/composer-unused > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
