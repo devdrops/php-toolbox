@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BASE="docker run -ti devdrops/php-toolbox:latest"
+
+eval "$BASE php --version"
+eval "$BASE composer --version"
+eval "$BASE phpunit --version"
+eval "$BASE phpcs --version"
+eval "$BASE php-cs-fixer --version"
+eval "$BASE phpmd --version"
+eval "$BASE behat --version"
+eval "$BASE phploc --version"
+eval "$BASE phpstan --version"
+
