@@ -2,13 +2,15 @@ FROM php:latest
 
 ARG VCS_REF
 ARG BUILD_DATE
+ARG BUILD_VERSION
 
 LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.name="DevDrops/PHP-Toolbox" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/devdrops/php-toolbox" \
-      org.label-schema.schema-version="1.0"
+      org.label-schema.schema-version="1.0" \
+      org.label-schema.version=$BUILD_VERSION
 
 RUN curl --silent https://getcomposer.org/installer | php > /dev/null 2>&1 && \
     mv ./composer.phar /usr/local/bin/composer > /dev/null 2>&1
