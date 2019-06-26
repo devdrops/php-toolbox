@@ -35,6 +35,7 @@ RUN composer global require \
         behat/behat \
         phploc/phploc \
         phpstan/phpstan \
+        vimeo/psalm \
         icanhazstring/composer-unused > /dev/null 2>&1
 
 RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
