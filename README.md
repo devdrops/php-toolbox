@@ -10,16 +10,17 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 7.3.3 (cli) (built: Mar  9 2019 00:27:53) ( NTS )|
-|Composer|Composer version 1.8.4 2019-02-11 10:52:10|
-|phpunit/phpunit|PHPUnit 8.0.5 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.4.1 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 2.14.2 Sunrise by Fabien Potencier and Dariusz Ruminski|
-|phpmd/phpmd|PHPMD 2.6.0|
+|PHP|PHP 7.3.6 (cli) (built: Jun 17 2019 21:12:29) ( NTS )|
+|Composer|Composer version 1.8.6 2019-06-11 15:03:05|
+|phpunit/phpunit|PHPUnit 8.2.4 by Sebastian Bergmann and contributors.|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.4.2 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 2.15.1 Europe Round by Fabien Potencier and Dariusz Ruminski|
+|phpmd/phpmd|PHPMD 2.6.1|
 |behat/behat|behat 3.5.0|
 |phploc/phploc|phploc 5.0.0 by Sebastian Bergmann.|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.11.4|
-|icanhazstring/composer-unused|0.1.0|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.11.12|
+|icanhazstring/composer-unused|0.5.6|
+|viemo/psalm|Psalm 3.4.9@aa0efcf026e353ce2a4b66c4d3d81caebbf0966a|
 
 ## Install
 

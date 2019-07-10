@@ -11,4 +11,5 @@ eval "$BASE phpmd --version"
 eval "$BASE behat --version"
 eval "$BASE phploc --version"
 eval "$BASE phpstan --version"
+eval "$BASE psalm --version"
 
