@@ -10,17 +10,17 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 7.3.6 (cli) (built: Jun 17 2019 21:12:29) ( NTS )|
-|Composer|Composer version 1.8.6 2019-06-11 15:03:05|
-|phpunit/phpunit|PHPUnit 8.2.4 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.4.2 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 2.15.1 Europe Round by Fabien Potencier and Dariusz Ruminski|
-|phpmd/phpmd|PHPMD 2.6.1|
+|PHP|PHP 7.3.10 (cli) (built: Sep 26 2019 21:24:53) ( NTS )|
+|Composer|Composer version 1.9.0 2019-08-02 20:55:32|
+|phpunit/phpunit|PHPUnit 8.4.0 by Sebastian Bergmann and contributors.|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.5.0 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 2.15.3 Europe Round by Fabien Potencier and Dariusz Ruminski|
+|phpmd/phpmd|PHPMD 2.7.0|
 |behat/behat|behat 3.5.0|
 |phploc/phploc|phploc 5.0.0 by Sebastian Bergmann.|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.11.12|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.11.16|
 |icanhazstring/composer-unused|0.5.6|
-|viemo/psalm|Psalm 3.4.9@aa0efcf026e353ce2a4b66c4d3d81caebbf0966a|
+|vimeo/psalm|Psalm 3.5.3@c3e781c4a06cbb17dc32068eb5d6de075f6babdc|
 
 ## Install
 
