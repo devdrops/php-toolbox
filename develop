@@ -2,4 +2,5 @@
 
 docker build \
     --build-arg BUILD_VERSION=develop \
+    --no-cache \
     -t devdrops/php-toolbox:develop .
