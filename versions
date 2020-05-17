@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE="docker run -ti devdrops/php-toolbox:latest"
+BASE="docker run -ti devdrops/php-toolbox:$1"
 
 eval "$BASE php --version"
 eval "$BASE composer --version"
