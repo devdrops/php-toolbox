@@ -38,4 +38,4 @@ RUN composer global require \
         icanhazstring/composer-unused \
         vimeo/psalm > /dev/null 2>&1
 
-RUN ln -s /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
+RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
