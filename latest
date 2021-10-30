@@ -1,8 +1,11 @@
 #!/bin/bash
 
+export GIT_LAST_COMMIT_HASH=`git rev-parse --short HEAD`
+export CURRENT_DATE_GMT=`date +"%Y-%m-%dT%H:%M:%S_GMT%Z"`
+
 docker build \
-    --build-arg VCS_REF=`git rev-parse --short HEAD` \
-    --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-    --build-arg BUILD_VERSION=latest \
+    --build-arg VCS_REF=${GIT_LAST_COMMIT_HASH} \
+    --build-arg BUILD_DATE=${CURRENT_DATE_GMT} \
+    --build-arg BUILD_VERSION=${GIT_LAST_COMMIT_HASH} \
     --no-cache \
-    -t devdrops/php-toolbox:latest .
+    -t devdrops/php-toolbox:${GIT_LAST_COMMIT_HASH} .
