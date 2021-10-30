@@ -1,6 +1,11 @@
 #!/bin/bash
 
-BASE="docker run -ti devdrops/php-toolbox:$1"
+# USAGE:
+#   Run `./versions TAG` where TAG is the tagged image version you want to check
+#   the information of every package.
+
+
+BASE="docker run -ti --rm devdrops/php-toolbox:$1"
 
 eval "$BASE php --version"
 eval "$BASE composer --version"
