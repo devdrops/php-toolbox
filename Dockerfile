@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:8-alpine
 
 ARG VCS_REF
 ARG BUILD_DATE
@@ -12,20 +12,14 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.schema-version="1.0" \
       org.label-schema.version=$BUILD_VERSION
 
-RUN curl --silent https://getcomposer.org/installer | php > /dev/null 2>&1 && \
-    mv ./composer.phar /usr/local/bin/composer > /dev/null 2>&1
+RUN curl --silent https://getcomposer.org/installer | php && \
+    mv ./composer.phar /usr/local/bin/composer
 
-RUN apt-get update > /dev/null 2>&1 && \
-    apt-get -y install \
-        curl \
-        git \
-        zip \
-        unzip \
-        zlib1g-dev \
-        libzip-dev > /dev/null 2>&1 && \
-    apt-get clean && \
-    docker-php-ext-install zip && \
-    rm -rf /var/lib/apt/lists/* > /dev/null 2>&1
+RUN apk update && \
+    apk upgrade && \
+    apk --no-cache add \
+        git zip unzip && \
+    rm -rf /var/cache/apk/*
 
 RUN composer global require \
         phpunit/phpunit \
@@ -36,6 +30,6 @@ RUN composer global require \
         phploc/phploc \
         phpstan/phpstan \
         icanhazstring/composer-unused \
-        vimeo/psalm > /dev/null 2>&1
+        vimeo/psalm
 
-RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/ > /dev/null 2>&1
+RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
