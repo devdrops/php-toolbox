@@ -8,4 +8,5 @@ docker build \
     --build-arg BUILD_DATE=${CURRENT_DATE_GMT} \
     --build-arg BUILD_VERSION=${GIT_LAST_COMMIT_HASH} \
     --no-cache \
+    -t devdrops/php-toolbox:latest \
     -t devdrops/php-toolbox:${GIT_LAST_COMMIT_HASH} .

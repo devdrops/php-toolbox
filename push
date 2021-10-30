@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export GIT_LAST_COMMIT_HASH=`git rev-parse --short HEAD`
+
+docker push devdrops/php-toolbox:latest
+docker push devdrops/php-toolbox:${GIT_LAST_COMMIT_HASH}
