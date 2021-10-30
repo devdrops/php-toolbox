@@ -1,4 +1,4 @@
-# Docker/PHP-Toolbox
+# devdrops/php-toolbox
 
 [![](https://images.microbadger.com/badges/version/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own image badge on microbadger.com")  [![](https://images.microbadger.com/badges/commit/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own commit badge on microbadger.com")
 
@@ -10,17 +10,17 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 7.4.6 (cli) (built: May 15 2020 12:47:30) ( NTS )|
-|Composer|Composer 1.10.6 2020-05-06 10:28:10|
-|phpunit/phpunit|PHPUnit 9.1.4 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.5.5 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 2.16.3 Yellow Bird by Fabien Potencier and Dariusz Ruminski|
-|phpmd/phpmd|PHPMD 2.8.1|
-|behat/behat|behat 3.6.1|
-|phploc/phploc|phploc 6.0.2 by Sebastian Bergmann.|
+|PHP|PHP 8.0.12 (cli) (built: Oct 21 2021 15:24:13) ( NTS )|
+|Composer|Composer 2.1.10 2021-10-29 22:34:57|
+|phpunit/phpunit|PHPUnit 9.5.10 by Sebastian Bergmann and contributors.|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.6.1 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.2.1 Mountains by Fabien Potencier and Dariusz Ruminski|
+|phpmd/phpmd|PHPMD 2.10.2|
+|behat/behat|behat 3.8.1|
+|phploc/phploc|phploc 7.0.2 by Sebastian Bergmann.|
 |phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.12.25|
 |icanhazstring/composer-unused|0.5.6|
-|vimeo/psalm|Psalm 3.11.4@58e1d8e68e5098bf4fbfdfb420c38d563f882549|
+|vimeo/psalm|Psalm 4.11.2@6fba5eb554f9507b72932f9c75533d8af593688d|
 
 ## Install
 
