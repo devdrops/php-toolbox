@@ -21,6 +21,7 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 |phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.12.25|
 |icanhazstring/composer-unused|0.5.6|
 |vimeo/psalm|Psalm 4.11.2@6fba5eb554f9507b72932f9c75533d8af593688d|
+|Xdebug|Xdebug v3.1.1, Copyright (c) 2002-2021, by Derick Rethans|
 
 ## Install
 

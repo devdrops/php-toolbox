@@ -1,5 +1,6 @@
 FROM php:8-alpine
 
+# Image information
 ARG VCS_REF
 ARG BUILD_DATE
 ARG BUILD_VERSION
@@ -12,15 +13,32 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.schema-version="1.0" \
       org.label-schema.version=$BUILD_VERSION
 
-RUN curl --silent https://getcomposer.org/installer | php && \
-    mv ./composer.phar /usr/local/bin/composer
+# Port usage for built-in server
+EXPOSE 8000
 
+# Alpine requirements
 RUN apk update && \
     apk upgrade && \
     apk --no-cache add \
-        git zip unzip && \
+        git \
+        zip \
+        unzip \
+        autoconf \
+        gcc \
+        make \
+        g++ \
+        zlib-dev && \
     rm -rf /var/cache/apk/*
 
+# Common PHP extensions
+RUN docker-php-ext-install \
+    mysqli \
+    pdo \
+    pdo_mysql
+
+# Composer and tools
+RUN curl --silent https://getcomposer.org/installer | php && \
+    mv ./composer.phar /usr/local/bin/composer
 RUN composer global require \
         phpunit/phpunit \
         squizlabs/php_codesniffer \
@@ -31,5 +49,10 @@ RUN composer global require \
         phpstan/phpstan \
         icanhazstring/composer-unused \
         vimeo/psalm
-
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
+
+# xdebug
+RUN pecl install -o -f xdebug && \
+    docker-php-ext-enable xdebug && \
+    rm -rf /tmp/pear
+COPY xdebug.ini $PHP_INIT_DIR/conf.d/
