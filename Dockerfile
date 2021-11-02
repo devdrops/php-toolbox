@@ -28,14 +28,17 @@ RUN apk update && \
         gcc \
         make \
         g++ \
-        zlib-dev && \
+        zlib-dev \
+        gmp \
+        gmp-dev && \
     rm -rf /var/cache/apk/*
 
 # Common PHP extensions
 RUN docker-php-ext-install \
     mysqli \
     pdo \
-    pdo_mysql
+    pdo_mysql \
+    gmp
 
 # Composer and tools
 RUN curl --silent https://getcomposer.org/installer | php && \
