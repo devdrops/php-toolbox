@@ -15,6 +15,7 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
 
 # Port usage for built-in server
 EXPOSE 8000
+EXPOSE 80
 
 # Alpine requirements
 RUN apk update && \
