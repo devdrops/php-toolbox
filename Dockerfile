@@ -1,4 +1,4 @@
-FROM php:8-alpine
+FROM php:8.1.12RC1-zts-alpine3.16
 
 # Image information
 ARG VCS_REF
@@ -14,8 +14,9 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.version=$BUILD_VERSION
 
 # Port usage for built-in server
-EXPOSE 8000
-EXPOSE 80
+EXPOSE 8000/tcp
+EXPOSE 8080/tcp
+EXPOSE 8081/tcp
 
 # Alpine requirements
 RUN apk update && \
