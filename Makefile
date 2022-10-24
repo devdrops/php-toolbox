@@ -2,7 +2,6 @@ SHELL := '/bin/bash'
 
 GIT_LAST_COMMIT_HASH := $(shell git rev-parse --short HEAD)
 CURRENT_DATE_GMT := $(shell date +"%Y-%m-%dT%H:%M:%S_GMT%Z")
-BASE := "docker run -ti --rm devdrops/php-toolbox:$1"
 
 develop:
 	@echo "Building tag 'develop'"
@@ -14,7 +13,6 @@ develop:
 latest:
 	@echo "Building tags 'latest' and '$(GIT_LAST_COMMIT_HASH)'"
 	docker build \
-		--build-arg BUILD_VERSION=develop \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
 		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
