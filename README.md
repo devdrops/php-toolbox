@@ -10,18 +10,18 @@ Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdr
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 8.0.12 (cli) (built: Oct 21 2021 15:24:13) ( NTS )|
-|Composer|Composer 2.1.10 2021-10-29 22:34:57|
-|phpunit/phpunit|PHPUnit 9.5.10 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.6.1 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.2.1 Mountains by Fabien Potencier and Dariusz Ruminski|
-|phpmd/phpmd|PHPMD 2.10.2|
-|behat/behat|behat 3.8.1|
+|PHP|PHP 8.1.12RC1 (cli) (built: Oct 14 2022 23:02:42) (ZTS)|
+|Composer|Composer version 2.4.3 2022-10-14 16:56:41|
+|phpunit/phpunit|PHPUnit 9.5.25 #StandWithUkraine|
+|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.1 (stable) by Squiz (http://www.squiz.net)|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.12.0 Oliva by Fabien Potencier and Dariusz Ruminski.|
+|phpmd/phpmd|PHPMD 2.13.0|
+|behat/behat|behat 3.11.0|
 |phploc/phploc|phploc 7.0.2 by Sebastian Bergmann.|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 0.12.25|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.8.11|
 |icanhazstring/composer-unused|0.5.6|
-|vimeo/psalm|Psalm 4.11.2@6fba5eb554f9507b72932f9c75533d8af593688d|
-|Xdebug|Xdebug v3.1.1, Copyright (c) 2002-2021, by Derick Rethans|
+|vimeo/psalm|Psalm 4.29.0@7ec5ffbd5f68ae03782d7fd33fff0c45a69f95b3|
+|Xdebug|Xdebug v3.1.5, Copyright (c) 2002-2022, by Derick Rethans|
 
 ## Install
 
