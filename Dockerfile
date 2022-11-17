@@ -1,4 +1,4 @@
-FROM php:8.1.12RC1-zts-alpine3.16
+FROM php:zts-alpine
 
 # Image information
 ARG VCS_REF
