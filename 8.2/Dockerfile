@@ -27,10 +27,13 @@ RUN apk update && \
         linux-headers libpq-dev sqlite-dev && \
     rm -rf /var/cache/apk/*
 
-# Common PHP extensions
+# PHP extensions
 RUN docker-php-ext-install \
     bcmath bz2 calendar ctype curl dba exif ffi gd gettext gmp intl ldap mysqli opcache pcntl pdo_dblib pdo_mysql \
     pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm zend_test
+# PHP OPcache disable by default
+ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
+COPY opcache.ini $PHP_INIT_DIR/conf.d/
 
 # Composer and tools
 RUN curl --silent https://getcomposer.org/installer | php && \
@@ -46,6 +49,7 @@ RUN composer global require \
         icanhazstring/composer-unused \
         vimeo/psalm
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
+COPY psalm.xml /config/psalm/
 
 # xdebug
 RUN pecl install -o -f xdebug-3.2.0 && \
