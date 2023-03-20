@@ -46,6 +46,7 @@ RUN composer global require \
         icanhazstring/composer-unused \
         vimeo/psalm
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
+COPY psalm.xml /config/psalm/
 
 # xdebug
 RUN pecl install -o -f xdebug-3.1.6 && \

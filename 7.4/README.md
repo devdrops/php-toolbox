@@ -16,3 +16,11 @@
 |icanhazstring/composer-unused|0.5.6|
 |vimeo/psalm|Psalm 5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda|
 |Xdebug|Xdebug v3.1.6, Copyright (c) 2002-2022, by Derick Rethans|
+
+## Important Notes For This Version
+
+**Regarding Psalm**. Psalm requires a configuration XML file. You can use your own, create a new one (by running `psalm
+--init`) or use a sample file I've added to the image. You can check it at [psalm.xml](./psalm.xml). IN the image, this
+file is located at `/code/psalm/`.
+
+To use this sample file, run any Psalm command as `psalm -c /config/psalm/psalm.xml`.
