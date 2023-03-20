@@ -11,13 +11,15 @@
 |friendsofphp/php-cs-fixer|PHP CS Fixer 3.15.0 BoY42 by Fabien Potencier and Dariusz Ruminski.|
 |phpmd/phpmd|PHPMD 2.13.0|
 |behat/behat|behat 3.12.0|
-|phploc/phploc|phploc 7.0.2 by Sebastian Bergmann.|
 |phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.6|
 |icanhazstring/composer-unused|0.5.6|
 |vimeo/psalm|Psalm 5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda|
 |Xdebug|Xdebug v3.1.6, Copyright (c) 2002-2022, by Derick Rethans|
 
 ## Important Notes For This Version
+
+**Regarding PHPLOC**. Since January 2023, Sebastian Bergmann decided to archive the repository. So, I won't keep it to
+avoid breaking changes as new fixes on PHP may cause problems that will not be fixed.
 
 **Regarding Psalm**. Psalm requires a configuration XML file. You can use your own, create a new one (by running `psalm
 --init`) or use a sample file I've added to the image. You can check it at [psalm.xml](./psalm.xml). IN the image, this

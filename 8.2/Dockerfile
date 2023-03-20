@@ -44,7 +44,6 @@ RUN composer global require \
         friendsofphp/php-cs-fixer \
         phpmd/phpmd \
         behat/behat \
-        phploc/phploc \
         phpstan/phpstan \
         icanhazstring/composer-unused \
         vimeo/psalm
