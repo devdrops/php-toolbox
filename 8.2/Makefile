@@ -4,7 +4,7 @@ GIT_LAST_COMMIT_HASH := $(shell git rev-parse --short HEAD)
 CURRENT_DATE_GMT := $(shell date +"%Y-%m-%dT%H:%M:%S_GMT%Z")
 
 develop:
-	@echo "Building tag 'develop'"
+	@echo "Building tag '8.2-dev'"
 	docker build \
 		--build-arg BUILD_VERSION=8.2-dev \
 		--no-cache \
