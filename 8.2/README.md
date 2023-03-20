@@ -12,7 +12,7 @@
 |phpmd/phpmd|PHPMD 2.13.0|
 |behat/behat|behat 3.12.0|
 |phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.6|
-|icanhazstring/composer-unused|0.5.6|
+|icanhazstring/composer-unused|0.8.7|
 |vimeo/psalm|Psalm 5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda|
 |Xdebug|Xdebug v3.2.0, Copyright (c) 2002-2022, by Derick Rethans|
 
