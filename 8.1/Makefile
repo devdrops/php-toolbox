@@ -20,7 +20,7 @@ latest:
 		-t devdrops/php-toolbox:8.1 .
 
 push:
-	@echo "Pushing tags 'latest' and '8.2'"
+	@echo "Pushing tag '8.1'"
 	docker push devdrops/php-toolbox:8.1
 
 

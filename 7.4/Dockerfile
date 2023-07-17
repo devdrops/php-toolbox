@@ -21,16 +21,16 @@ EXPOSE 8081/tcp
 # Alpine requirements
 RUN apk update && \
     apk upgrade && \
-    apk --no-cache add \
+    apk add --no-cache \
         git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2-dev libffi \
         libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev freetds-dev \
-        libpq-dev sqlite-dev && \
+        libpq-dev sqlite-dev libzip-dev zlib-dev && \
     rm -rf /var/cache/apk/*
 
 # PHP extensions
 RUN docker-php-ext-install \
     bcmath bz2 calendar ctype curl dba exif ffi gd gettext gmp intl ldap mysqli opcache pcntl pdo_dblib pdo_mysql \
-    pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm xmlrpc zend_test
+    pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm xmlrpc zend_test zip
 
 # Composer and tools
 RUN curl --silent https://getcomposer.org/installer | php && \
