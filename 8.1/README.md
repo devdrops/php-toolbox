@@ -15,6 +15,7 @@
 |icanhazstring/composer-unused|0.8.7|
 |vimeo/psalm|Psalm 5.13.1@086b94371304750d1c673315321a55d15fc59015|
 |Xdebug|Xdebug v3.2.0, Copyright (c) 2002-2022, by Derick Rethans|
+|Rector|Rector 0.17.7|
 
 ## Important Notes For This Version
 

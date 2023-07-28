@@ -18,4 +18,5 @@ eval "$BASE phpstan --version"
 eval "$BASE psalm --version"
 eval "$BASE composer-unused --version"
 eval "$BASE pest --version"
+eval "$BASE rector --version"
 

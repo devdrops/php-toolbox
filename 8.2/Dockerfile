@@ -50,7 +50,8 @@ RUN composer global config \
         phpstan/phpstan \
         icanhazstring/composer-unused \
         vimeo/psalm \
-        pestphp/pest
+        pestphp/pest \
+        rector/rector
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 COPY psalm.xml /config/psalm/
 

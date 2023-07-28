@@ -5,16 +5,17 @@
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 8.2.3 (cli) (built: Feb 14 2023 20:48:45) (NTS)|
-|Composer|Composer version 2.5.4 2023-02-15 13:10:06|
-|phpunit/phpunit|PHPUnit 10.0.16 by Sebastian Bergmann and contributors.|
+|Composer|Composer version 2.5.8 2023-06-09 17:13:21|
+|phpunit/phpunit|PHPUnit 10.2.6 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.2 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.15.0 BoY42 by Fabien Potencier and Dariusz Ruminski.|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.22.0 Chips & Pizza by Fabien Potencier and Dariusz Ruminski.|
 |phpmd/phpmd|PHPMD 2.13.0|
-|behat/behat|behat 3.12.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.6|
+|behat/behat|behat 3.13.0|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.26|
 |icanhazstring/composer-unused|0.8.7|
-|vimeo/psalm|Psalm 5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda|
+|vimeo/psalm|Psalm 5.13.1@086b94371304750d1c673315321a55d15fc59015|
 |Xdebug|Xdebug v3.2.0, Copyright (c) 2002-2022, by Derick Rethans|
+|Rector|Rector 0.17.7|
 
 ## Important Notes For This Version
 

@@ -43,7 +43,8 @@ RUN composer global require \
         behat/behat \
         phpstan/phpstan \
         icanhazstring/composer-unused \
-        vimeo/psalm
+        vimeo/psalm \
+        rector/rector
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 COPY psalm.xml /config/psalm/
 
