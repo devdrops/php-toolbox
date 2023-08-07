@@ -6,9 +6,9 @@ CURRENT_DATE_GMT := $(shell date +"%Y-%m-%dT%H:%M:%S_GMT%Z")
 develop:
 	@echo "Building tag '8.1-dev'"
 	docker build \
-		--build-arg BUILD_VERSION=8.2-dev \
+		--build-arg BUILD_VERSION=8.1-dev \
 		--no-cache \
-		-t devdrops/php-toolbox:8.2-dev .
+		-t devdrops/php-toolbox:8.1-dev .
 
 latest:
 	@echo "Building tag '8.1'"
