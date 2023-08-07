@@ -34,7 +34,6 @@ RUN docker-php-ext-install \
 
 # PHP OPcache disable by default
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
-COPY opcache.ini $PHP_INIT_DIR/conf.d/
 
 # Composer and tools
 RUN curl --silent https://getcomposer.org/installer | php && \
@@ -53,10 +52,14 @@ RUN composer global config \
         pestphp/pest \
         rector/rector
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
-COPY psalm.xml /config/psalm/
 
 # xdebug
 RUN pecl install -o -f xdebug-3.2.0 && \
     docker-php-ext-enable xdebug && \
     rm -rf /tmp/pear
-COPY xdebug.ini $PHP_INIT_DIR/conf.d/
+
+# Required config files
+COPY ./config-files/xdebug.ini $PHP_INIT_DIR/conf.d/
+COPY ./config-files/opcache.ini $PHP_INIT_DIR/conf.d/
+# Sample config files
+COPY ./config-files/psalm.xml /config/psalm/
