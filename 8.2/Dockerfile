@@ -22,7 +22,7 @@ EXPOSE 8081/tcp
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
-        git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2-dev libffi \
+        git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2 libxml2-dev libffi \
         libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev freetds-dev \
         linux-headers libpq-dev sqlite-dev libzip-dev zlib-dev && \
     rm -rf /var/cache/apk/*
@@ -58,8 +58,10 @@ RUN pecl install -o -f xdebug-3.2.0 && \
     docker-php-ext-enable xdebug && \
     rm -rf /tmp/pear
 
-# Required config files
-COPY ./config-files/xdebug.ini $PHP_INIT_DIR/conf.d/
-COPY ./config-files/opcache.ini $PHP_INIT_DIR/conf.d/
+# Config and/or required files
+COPY ./config-files/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
+COPY ./config-files/opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
+COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
 # Sample config files
 COPY ./config-files/psalm.xml /config/psalm/
