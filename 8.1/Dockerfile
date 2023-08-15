@@ -41,6 +41,8 @@ RUN curl --silent https://getcomposer.org/installer | php && \
     mv ./composer.phar /usr/local/bin/composer
 RUN composer global config \
         --no-plugins allow-plugins.pestphp/pest-plugin true && \
+    composer global config \
+        --no-plugins allow-plugins.infection/extension-installer true && \
     composer global require \
         phpunit/phpunit \
         squizlabs/php_codesniffer \
@@ -51,7 +53,11 @@ RUN composer global config \
         icanhazstring/composer-unused \
         vimeo/psalm \
         pestphp/pest \
-        rector/rector
+        rector/rector \
+        phparkitect/phparkitect \
+        codeception/codeception \
+        infection/infection \
+        qossmic/deptrac-shim
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
 # xdebug
