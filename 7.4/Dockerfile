@@ -35,7 +35,11 @@ RUN docker-php-ext-install \
 # Composer and tools
 RUN curl --silent https://getcomposer.org/installer | php && \
     mv ./composer.phar /usr/local/bin/composer
-RUN composer global require \
+RUN composer global config \
+        --no-plugins allow-plugins.pestphp/pest-plugin true && \
+    composer global config \
+        --no-plugins allow-plugins.infection/extension-installer true && \
+    composer global require \
         phpunit/phpunit \
         squizlabs/php_codesniffer \
         friendsofphp/php-cs-fixer \
@@ -44,7 +48,13 @@ RUN composer global require \
         phpstan/phpstan \
         icanhazstring/composer-unused \
         vimeo/psalm \
-        rector/rector
+        pestphp/pest \
+        rector/rector \
+        phparkitect/phparkitect \
+        phpspec/phpspec \
+        codeception/codeception \
+        infection/infection \
+        qossmic/deptrac-shim
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
 # xdebug
