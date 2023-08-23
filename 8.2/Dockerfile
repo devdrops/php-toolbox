@@ -22,9 +22,10 @@ EXPOSE 8081/tcp
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
-        git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2 libxml2-dev libffi \
-        libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev freetds-dev \
-        linux-headers libpq-dev sqlite-dev libzip-dev zlib-dev && \
+        git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2 libxml2-dev \
+        libffi libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev \
+        freetds-dev linux-headers libpq-dev sqlite-dev libzip-dev zlib-dev && \
+    ln -s /usr/include/libxml2/libxml /usr/include/ && \
     rm -rf /var/cache/apk/*
 
 # PHP extensions
@@ -56,7 +57,8 @@ RUN composer global config \
         phparkitect/phparkitect \
         codeception/codeception \
         infection/infection \
-        qossmic/deptrac-shim
+        qossmic/deptrac-shim \
+        phpmetrics/phpmetrics
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
 # xdebug
