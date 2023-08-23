@@ -24,4 +24,5 @@ eval "$BASE phpspec --version"
 eval "$BASE codecept --version"
 eval "$BASE infection --version"
 eval "$BASE deptrac --version"
+eval "$BASE phpmetrics --version"
 
