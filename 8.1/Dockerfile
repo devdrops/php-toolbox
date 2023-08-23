@@ -57,7 +57,8 @@ RUN composer global config \
         phparkitect/phparkitect \
         codeception/codeception \
         infection/infection \
-        qossmic/deptrac-shim
+        qossmic/deptrac-shim \
+        phpmetrics/phpmetrics
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
 # xdebug
