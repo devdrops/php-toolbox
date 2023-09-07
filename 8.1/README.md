@@ -4,20 +4,19 @@
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 8.1.22 (cli) (built: Aug  9 2023 05:58:24) (NTS)|
-|Composer|Composer version 2.5.8 2023-06-09 17:13:21|
+|PHP|PHP 8.1.23 (cli) (built: Sep  2 2023 07:56:24) (NTS)|
+|Composer|Composer version 2.6.2 2023-09-03 14:09:15|
 |phpunit/phpunit|PHPUnit 10.3.2 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.2 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.23.0 First Steps by Fabien Potencier and Dariusz Ruminski.|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.25.1 Crank Cake by Fabien Potencier and Dariusz Ruminski.|
 |phpmd/phpmd|PHPMD 2.13.0|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.30|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.33|
 |icanhazstring/composer-unused|0.8.7|
 |vimeo/psalm|Psalm 5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352|
-|Xdebug|Xdebug v3.2.0, Copyright (c) 2002-2022, by Derick Rethans|
-|Rector|Rector 0.18.0|
+|Xdebug|Xdebug v3.2.2, Copyright (c) 2002-2023, by Derick Rethans|
+|Rector|Rector 0.18.2|
 |PHPArkitect|PHPArkitect version 0.3.25|
-|phpspec|phpspec 7.4.0|
 |Codeception|Codeception 5.0.11|
 |Infection|Infection - PHP Mutation Testing Framework version 0.27.0|
 |Deptrac|deptrac 1.0.2|

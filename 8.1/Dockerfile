@@ -62,7 +62,7 @@ RUN composer global config \
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
 # xdebug
-RUN pecl install -o -f xdebug-3.2.0 && \
+RUN pecl install -o -f xdebug-3.2.2 && \
     docker-php-ext-enable xdebug && \
     rm -rf /tmp/pear
 
