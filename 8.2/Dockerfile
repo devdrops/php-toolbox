@@ -4,6 +4,7 @@ FROM php:8.2-alpine
 ARG VCS_REF
 ARG BUILD_DATE
 ARG BUILD_VERSION
+ARG INSTALL_XDEBUG=false
 
 LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.name="DevDrops/PHP-Toolbox" \
@@ -61,14 +62,13 @@ RUN composer global config \
         phpmetrics/phpmetrics
 RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 
-# xdebug
-RUN pecl install -o -f xdebug-3.2.2 && \
-    docker-php-ext-enable xdebug && \
-    rm -rf /tmp/pear
+# xdebug (OPTIONAL)
+COPY ./config-files/xdebug.ini /config/xdebug/xdebug.ini
+COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
+COPY ./helpers/xdebug/install.sh /config/xdebug/install.sh
+RUN if [[ "$INSTALL_XDEBUG" = "true" ]]; then sh /config/xdebug/install.sh ; fi
 
 # Config and/or required files
-COPY ./config-files/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
 COPY ./config-files/opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
 # Sample config files

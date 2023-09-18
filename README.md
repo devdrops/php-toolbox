@@ -1,16 +1,18 @@
 # devdrops/php-toolbox
 
-[![](https://images.microbadger.com/badges/version/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own image badge on microbadger.com")  [![](https://images.microbadger.com/badges/commit/devdrops/php-toolbox.svg)](https://microbadger.com/images/devdrops/php-toolbox "Get your own commit badge on microbadger.com")
-
 A Docker image designed for PHP developers that care about code quality.
 
-Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdrops/php-toolbox/). Also check the whole
-content description at the [MicroBadger](https://microbadger.com/images/devdrops/php-toolbox).
+Available on Docker Hub at [devdrops/php-toolbox](https://hub.docker.com/r/devdrops/php-toolbox/).
 
 ## Attention
 
-From now on, I'll publish a image for every major version of PHP, where `latest` will be the most stable release at the
-moment.
+From now on, I'll publish an image for every minor version of PHP, where `latest` will be the most stable release at the
+moment:
+
+- 7.4
+- 8.0
+- 8.1
+- 8.2
 
 Check each directory for more information regarding each version :wink:
 
@@ -32,7 +34,7 @@ For development:
 
 ## Usage
 
-All tools can be acessed by executing:
+All tools can be accessed by executing:
 
 ```bash
 docker run -ti --rm -v $(pwd):/code -w /code devdrops/php-toolbox:latest CHOOSEN_BINARY
