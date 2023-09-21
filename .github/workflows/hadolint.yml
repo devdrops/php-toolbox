@@ -21,8 +21,8 @@ permissions:
   contents: read
 
 jobs:
-  hadolint:
-    name: Run hadolint scanning
+  hadolint-74:
+    name: Run hadolint scanning for 7.4
     runs-on: ubuntu-latest
     permissions:
       contents: read # for actions/checkout to fetch code
@@ -31,7 +31,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Run hadolint for 7.4
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -39,7 +38,22 @@ jobs:
           format: sarif
           output-file: hadolint-7.4-results.sarif
           no-fail: true
+      - name: Upload 7.4 analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: hadolint-7.4-results.sarif
+          wait-for-processing: true
 
+  hadolint-80:
+    name: Run hadolint scanning for 8.0
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run hadolint for 8.0
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -47,7 +61,22 @@ jobs:
           format: sarif
           output-file: hadolint-8.0-results.sarif
           no-fail: true
+      - name: Upload 8.0 analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: hadolint-8.0-results.sarif
+          wait-for-processing: true
 
+  hadolint-81:
+    name: Run hadolint scanning for 8.1
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run hadolint for 8.1
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -55,7 +84,22 @@ jobs:
           format: sarif
           output-file: hadolint-8.1-results.sarif
           no-fail: true
+      - name: Upload 8.1 analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: hadolint-8.1-results.sarif
+          wait-for-processing: true
 
+  hadolint-82:
+    name: Run hadolint scanning for 8.2
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run hadolint for 8.2
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -63,25 +107,6 @@ jobs:
           format: sarif
           output-file: hadolint-8.2-results.sarif
           no-fail: true
-
-      - name: Upload 7.4 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: hadolint-7.4-results.sarif
-          wait-for-processing: true
-
-      - name: Upload 8.0 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: hadolint-8.0-results.sarif
-          wait-for-processing: true
-
-      - name: Upload 8.1 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: hadolint-8.1-results.sarif
-          wait-for-processing: true
-
       - name: Upload 8.2 analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v2
         with:
