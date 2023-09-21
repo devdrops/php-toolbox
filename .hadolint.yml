@@ -1,0 +1,8 @@
+# Haskell Dockerfile Linter settings
+# Reference: https://github.com/hadolint/hadolint#configure
+failure-threshold: "warning"
+label-schema:
+  author: "Davi Marcondes Moreira"
+  contact: "davi.marcondes.moreira@gmail.com"
+  license: "GPL-3.0-only"
+no-color: true
