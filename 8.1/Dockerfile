@@ -38,8 +38,7 @@ RUN docker-php-ext-install \
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 
 # Composer and tools
-SHELL ["/bin/sh", "-o", "pipefail", "-c"]
-RUN curl --silent https://getcomposer.org/installer | php && \
+RUN set -o pipefail && curl --silent https://getcomposer.org/installer | php && \
     mv ./composer.phar /usr/local/bin/composer
 RUN composer global config \
         --no-plugins allow-plugins.pestphp/pest-plugin true && \
