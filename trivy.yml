@@ -1,0 +1,12 @@
+report: all
+severity:
+  - UNKNOWN
+  - LOW
+  - MEDIUM
+  - HIGH
+  - CRITICAL
+scan:
+  scanners:
+    - vuln
+    - config
+    - secret

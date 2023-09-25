@@ -25,35 +25,46 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build image from Dockerfile
+      - name: Build images
         run: |
           cd ./7.4
           make latest
 
+  scan-7-4:
+    needs: build-7-4
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 7.4 image
+    runs-on: "ubuntu-20.04"
+    steps:
       - name: Run Trivy vulnerability scanner (xdebug == false)
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
           image-ref: 'docker.io/devdrops/php-toolbox:7.4'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
+          format: sarif
           output: 'trivy-results-74.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Run Trivy vulnerability scanner (xdebug == true)
-        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
-        with:
-          image-ref: 'docker.io/devdrops/php-toolbox:7.4-xdebug'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
-          output: 'trivy-results-74-xdebug.sarif'
-          severity: 'CRITICAL,HIGH'
-
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-74.sarif'
 
+  scan-7-4-xdebug:
+    needs: build-7-4
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 7.4-xdebug image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == true)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:7.4-xdebug'
+          format: sarif
+          output: 'trivy-results-74-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
@@ -69,41 +80,52 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build image from Dockerfile
+      - name: Build images
         run: |
           cd ./8.0
           make latest
 
+  scan-8-0:
+    needs: build-8-0
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.0 image
+    runs-on: "ubuntu-20.04"
+    steps:
       - name: Run Trivy vulnerability scanner (xdebug == false)
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
           image-ref: 'docker.io/devdrops/php-toolbox:8.0'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
+          format: sarif
           output: 'trivy-results-80.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Run Trivy vulnerability scanner (xdebug == true)
-        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
-        with:
-          image-ref: 'docker.io/devdrops/php-toolbox:8.0-xdebug'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
-          output: 'trivy-results-80-xdebug.sarif'
-          severity: 'CRITICAL,HIGH'
-
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-80.sarif'
 
+  scan-8-0-xdebug:
+    needs: build-8-0
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.0-xdebug image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == true)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:8.0-xdebug'
+          format: sarif
+          output: 'trivy-results-80-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-80-xdebug.sarif'
 
-  build-8.1:
+  build-8-1:
     permissions:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
@@ -113,35 +135,46 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build image from Dockerfile
+      - name: Build images
         run: |
           cd ./8.1
           make latest
 
+  scan-8-1:
+    needs: build-8-1
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.1 image
+    runs-on: "ubuntu-20.04"
+    steps:
       - name: Run Trivy vulnerability scanner (xdebug == false)
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
           image-ref: 'docker.io/devdrops/php-toolbox:8.1'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
+          format: sarif
           output: 'trivy-results-81.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Run Trivy vulnerability scanner (xdebug == true)
-        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
-        with:
-          image-ref: 'docker.io/devdrops/php-toolbox:8.1-xdebug'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
-          output: 'trivy-results-81-xdebug.sarif'
-          severity: 'CRITICAL,HIGH'
-
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-81.sarif'
 
+  scan-8-1-xdebug:
+    needs: build-8-1
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.1-xdebug image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == true)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:8.1-xdebug'
+          format: sarif
+          output: 'trivy-results-81-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
@@ -157,37 +190,47 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Build image from Dockerfile
+      - name: Build images
         run: |
           cd ./8.2
           make latest
 
+  scan-8-2:
+    needs: build-8-2
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.2 image
+    runs-on: "ubuntu-20.04"
+    steps:
       - name: Run Trivy vulnerability scanner (xdebug == false)
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
           image-ref: 'docker.io/devdrops/php-toolbox:8.2'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
+          format: sarif
           output: 'trivy-results-82.sarif'
-          severity: 'CRITICAL,HIGH'
-
-      - name: Run Trivy vulnerability scanner (xdebug == true)
-        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
-        with:
-          image-ref: 'docker.io/devdrops/php-toolbox:8.2-xdebug'
-          format: 'template'
-          template: '@/contrib/sarif.tpl'
-          output: 'trivy-results-82-xdebug.sarif'
-          severity: 'CRITICAL,HIGH'
-
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-82.sarif'
 
+  scan-8-2-xdebug:
+    needs: build-8-2
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.2-xdebug image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == true)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:8.2-xdebug'
+          format: sarif
+          output: 'trivy-results-82-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: 'trivy-results-82-xdebug.sarif'
           sarif_file: 'trivy-results-82-xdebug.sarif'
