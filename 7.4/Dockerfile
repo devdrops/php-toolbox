@@ -34,6 +34,7 @@ RUN docker-php-ext-install \
     pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm xmlrpc zend_test zip
 
 # Composer and tools
+SHELL ["/bin/sh", "-o", "pipefail", "-c"]
 RUN curl --silent https://getcomposer.org/installer | php && \
     mv ./composer.phar /usr/local/bin/composer
 RUN composer global config \
@@ -63,7 +64,7 @@ RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
 COPY ./config-files/xdebug.ini /config/xdebug/xdebug.ini
 COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
 COPY ./helpers/xdebug/install.sh /config/xdebug/install.sh
-RUN if [[ "$INSTALL_XDEBUG" = "true" ]]; then sh /config/xdebug/install.sh ; fi
+RUN if [ "$INSTALL_XDEBUG" = "true" ]; then sh /config/xdebug/install.sh ; fi
 
 # Config and/or required files
 COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
