@@ -25,7 +25,8 @@ RUN apk update && \
     apk add --no-cache \
         git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2-dev libffi \
         libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev freetds-dev \
-        libpq-dev sqlite-dev libzip-dev zlib-dev && \
+        libpq-dev sqlite-dev libzip-dev zlib-dev \
+        --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main && \
     rm -rf /var/cache/apk/*
 
 # PHP extensions
