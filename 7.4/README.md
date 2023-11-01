@@ -5,16 +5,16 @@
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 7.4.33 (cli) (built: Nov 12 2022 09:17:36) ( NTS )|
-|Composer|Composer version 2.6.3 2023-09-15 09:38:21|
-|phpunit/phpunit|PHPUnit 9.6.12 by Sebastian Bergmann and contributors.|
+|Composer|Composer version 2.6.5 2023-10-06 10:11:52|
+|phpunit/phpunit|PHPUnit 9.6.13 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.2 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.27.0 Jump & Run by Fabien Potencier and Dariusz Ruminski.|
-|phpmd/phpmd|PHPMD 2.13.0|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.37.1 ParaCache by Fabien Potencier and Dariusz Ruminski.|
+|phpmd/phpmd|PHPMD 2.14.1|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.34|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.40|
 |icanhazstring/composer-unused|0.8.7|
 |vimeo/psalm|Psalm 5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352|
-|Rector|Rector 0.18.3|
+|Rector|Rector 0.18.6|
 |PHPArkitect|PHPArkitect version 0.3.25|
 |phpspec|phpspec 7.4.0|
 |Codeception|Codeception 4.2.2|
