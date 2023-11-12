@@ -39,13 +39,12 @@ jobs:
       with:
         image: devdrops/php-toolbox:7.4
         args: --file=./7.4/Dockerfile
-        format: sarif
-        output: 'snyk-7.4.sarif'
+        sarif: 'snyk-7.4.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: 'snyk-7.4.sarif'
-    
+
   scan-7-4-xdebug:
     needs: build-7-4
     permissions:
@@ -62,8 +61,7 @@ jobs:
       with:
         image: devdrops/php-toolbox:7.4-xdebug
         args: --file=./7.4/Dockerfile
-        format: sarif
-        output: 'snyk-7.4-xdebug.sarif'
+        sarif: 'snyk-7.4-xdebug.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
@@ -98,13 +96,12 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.0
         args: --file=./8.0/Dockerfile
-        format: sarif
-        output: 'snyk-8.0.sarif'
+        sarif: 'snyk-8.0.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: 'snyk-8.0.sarif'
-    
+
   scan-8-0-xdebug:
     needs: build-8-0
     permissions:
@@ -121,8 +118,7 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.0-xdebug
         args: --file=./8.0/Dockerfile
-        format: sarif
-        output: 'snyk-8.0-xdebug.sarif'
+        sarif: 'snyk-8.0-xdebug.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
@@ -157,13 +153,12 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.1
         args: --file=./8.1/Dockerfile
-        format: sarif
-        output: 'snyk-8.1.sarif'
+        sarif: 'snyk-8.1.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: 'snyk-8.1.sarif'
-    
+
   scan-8-1-xdebug:
     needs: build-8-1
     permissions:
@@ -180,8 +175,7 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.1-xdebug
         args: --file=./8.1/Dockerfile
-        format: sarif
-        output: 'snyk-8.1-xdebug.sarif'
+        sarif: 'snyk-8.1-xdebug.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
@@ -216,13 +210,12 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.2
         args: --file=./8.2/Dockerfile
-        format: sarif
-        output: 'snyk-8.2.sarif'
+        sarif: 'snyk-8.2.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: 'snyk-8.2.sarif'
-    
+
   scan-8-2-xdebug:
     needs: build-8-2
     permissions:
@@ -239,8 +232,7 @@ jobs:
       with:
         image: devdrops/php-toolbox:8.2-xdebug
         args: --file=./8.2/Dockerfile
-        format: sarif
-        output: 'snyk-8.2-xdebug.sarif'
+        sarif: 'snyk-8.2-xdebug.sarif'
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
