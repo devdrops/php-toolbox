@@ -44,7 +44,7 @@ jobs:
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v2
       with:
-        sarif_file: './7.4/snyk.sarif'
+        sarif_file: 'snyk.sarif'
 
   scan-7-4-xdebug:
     needs: build-7-4
