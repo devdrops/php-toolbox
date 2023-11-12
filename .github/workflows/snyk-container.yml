@@ -31,6 +31,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 7.4 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -53,6 +55,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 7.4-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -88,6 +92,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.0 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -110,6 +116,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.0-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -145,6 +153,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.1 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -167,6 +177,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.1-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -202,6 +214,8 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.2 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -217,13 +231,15 @@ jobs:
         sarif_file: 'snyk-8.2.sarif'
 
   scan-8-2-xdebug:
-    needs: build-8-2
+    #needs: build-8-2
     permissions:
       contents: read
       security-events: write
       actions: read
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
     - name: Run Snyk to check 8.2-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
