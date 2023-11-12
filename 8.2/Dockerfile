@@ -4,6 +4,7 @@ FROM php:8.2-alpine
 ARG VCS_REF
 ARG BUILD_DATE
 ARG BUILD_VERSION
+ARG VERSION
 ARG INSTALL_XDEBUG=false
 
 LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
@@ -12,7 +13,8 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/devdrops/php-toolbox" \
       org.label-schema.schema-version="1.0" \
-      org.label-schema.version=$BUILD_VERSION
+      org.label-schema.build-version=$BUILD_VERSION \
+      org.label-schema.project-version=$VERSION
 
 # Port usage for built-in server
 EXPOSE 8000/tcp
