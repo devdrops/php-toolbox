@@ -37,7 +37,8 @@ RUN docker-php-ext-install \
     pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm xmlrpc zend_test zip
 
 # Composer and tools
-RUN set -o pipefail && curl --silent https://getcomposer.org/installer | php && \
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+RUN curl --silent https://getcomposer.org/installer | php && \
     mv ./composer.phar /usr/local/bin/composer
 RUN composer global config \
         --no-plugins allow-plugins.pestphp/pest-plugin true && \
