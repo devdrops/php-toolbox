@@ -50,10 +50,16 @@ push: ## Pushes to Docker Hub two images: 1. official tag, 2. official tag + Xde
 # ------------------------------------------------------------------------------------------------------
 release: latest push ## Build and deploy official tags.
 # ------------------------------------------------------------------------------------------------------
+shellcheck: ## Run shellcheck to scan sh files at ./helpers.
+	find . -type f -name "*.sh" -exec shellcheck {} \;
+# ------------------------------------------------------------------------------------------------------
+hadolint: ## Lint ./Dockerfile with Hadolint
+	docker run --rm -i hadolint/hadolint < Dockerfile
+# ------------------------------------------------------------------------------------------------------
 help: ## Print information of each Make task.
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 # ------------------------------------------------------------------------------------------------------
 
 
 # ------------------------------------------------------------------------------------------------------
-.PHONY: develop build debug latest push release help
+.PHONY: develop build debug latest push release shellcheck hadolint help
