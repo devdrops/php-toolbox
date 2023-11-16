@@ -6,7 +6,6 @@ ARG BUILD_DATE
 ARG BUILD_VERSION
 ARG VERSION
 ARG INSTALL_XDEBUG=false
-
 LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.name="DevDrops/PHP-Toolbox" \
       org.label-schema.vcs-ref=$VCS_REF \
@@ -16,60 +15,36 @@ LABEL maintainer="Davi Marcondes Moreira <davi.marcondes.moreira@gmail.com>" \
       org.label-schema.build-version=$BUILD_VERSION \
       org.label-schema.project-version=$VERSION
 
-# Port usage for built-in server
+# Ports exposed for built-in server
 EXPOSE 8000/tcp
 EXPOSE 8080/tcp
 EXPOSE 8081/tcp
 
 # Alpine requirements
-RUN apk update && \
-    apk upgrade && \
-    apk add --no-cache \
-        git zip unzip autoconf gcc make g++ zlib-dev gmp gmp-dev bzip2 bzip2-dev curl curl-dev libxml2-dev libffi \
-        libffi-dev libpng libpng-dev icu-dev libintl gettext gettext-dev ldb-dev libldap openldap-dev freetds-dev \
-        libpq-dev sqlite-dev libzip-dev zlib-dev \
-        --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main && \
-    rm -rf /var/cache/apk/*
+COPY ./helpers/alpine/dependencies.sh /config/alpine/dependencies.sh
+RUN sh /config/alpine/dependencies.sh
 
 # PHP extensions
-RUN docker-php-ext-install \
-    bcmath bz2 calendar ctype curl dba exif ffi gd gettext gmp intl ldap mysqli opcache pcntl pdo_dblib pdo_mysql \
-    pdo_pgsql pdo_sqlite pgsql shmop soap sockets sysvmsg sysvsem sysvshm xmlrpc zend_test zip
+COPY ./helpers/php/extensions.sh /config/php/extensions.sh
+RUN sh /config/php/extensions.sh
+# Config and/or required files for PHP
+COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
 
-# Composer and tools
+# Composer
+COPY ./helpers/composer/install.sh /config/composer/install.sh
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
-RUN curl --silent https://getcomposer.org/installer | php && \
-    mv ./composer.phar /usr/local/bin/composer
-RUN composer global config \
-        --no-plugins allow-plugins.pestphp/pest-plugin true && \
-    composer global config \
-        --no-plugins allow-plugins.infection/extension-installer true && \
-    composer global require \
-        phpunit/phpunit \
-        squizlabs/php_codesniffer \
-        friendsofphp/php-cs-fixer \
-        phpmd/phpmd \
-        behat/behat \
-        phpstan/phpstan \
-        icanhazstring/composer-unused \
-        vimeo/psalm \
-        pestphp/pest \
-        rector/rector \
-        phparkitect/phparkitect \
-        phpspec/phpspec \
-        codeception/codeception \
-        infection/infection \
-        qossmic/deptrac-shim \
-        phpmetrics/phpmetrics
-RUN ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/
+RUN sh /config/composer/install.sh
+# Composer configuration
+COPY ./helpers/composer/config.sh /config/composer/config.sh
+RUN sh /config/composer/config.sh
+# Composer tools
+COPY ./helpers/composer/install-tools.sh /config/composer/install-tools.sh
+RUN sh /config/composer/install-tools.sh
+# Sample config files
+COPY ./config-files/psalm.xml /config/psalm/psalm.xml
 
-# xdebug (optional)
+# Xdebug (optional)
 COPY ./config-files/xdebug.ini /config/xdebug/xdebug.ini
 COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
 COPY ./helpers/xdebug/install.sh /config/xdebug/install.sh
 RUN if [ "$INSTALL_XDEBUG" = "true" ]; then sh /config/xdebug/install.sh ; fi
-
-# Config and/or required files
-COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
-# Sample config files
-COPY ./config-files/psalm.xml /config/psalm/
