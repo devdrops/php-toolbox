@@ -12,9 +12,11 @@ VERSION := $(shell git describe --tags --always)
 develop: ## Build '*-dev' tag, including Xdebug.
 	@echo "Building tag '8.1-dev'"
 	docker build \
-		--build-arg BUILD_VERSION=8.1-dev \
+		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
+		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
+		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
+		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=true \
-		--no-cache \
 		-t devdrops/php-toolbox:8.1-dev .
 # ------------------------------------------------------------------------------------------------------
 build: ## Build the official tag.
