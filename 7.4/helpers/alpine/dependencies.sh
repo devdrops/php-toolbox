@@ -42,6 +42,7 @@ apk add --no-cache \
     freetds-dev=1.3.10-r0 \
     libpq-dev=14.10-r0 \
     sqlite-dev=3.40.1-r0 \
+    openssl=1.1.1w-r1 \
   --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main
 
 # Clean everything at the end
