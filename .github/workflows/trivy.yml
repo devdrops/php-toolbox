@@ -234,3 +234,58 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-82-xdebug.sarif'
+
+  build-8-3:
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Build 8.3 images
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build images
+        run: |
+          cd ./8.3
+          make latest
+
+  scan-8-3:
+    needs: build-8-3
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.3 image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == false)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:8.3'
+          format: sarif
+          output: 'trivy-results-83.sarif'
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results-83.sarif'
+
+  scan-8-3-xdebug:
+    needs: build-8-3
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
+    name: Scan 8.3-xdebug image
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Run Trivy vulnerability scanner (xdebug == true)
+        uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
+        with:
+          image-ref: 'docker.io/devdrops/php-toolbox:8.3-xdebug'
+          format: sarif
+          output: 'trivy-results-83-xdebug.sarif'
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results-83-xdebug.sarif'

@@ -1,10 +1,10 @@
-# PHP Version: 8.2
+# PHP Version: 8.3
 
 ## Features
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 8.2.13 (cli) (built: Nov 27 2023 22:43:16) (NTS)|
+|PHP|PHP 8.3.0 (cli) (built: Nov 27 2023 21:52:31) (NTS)|
 |Composer|Composer version 2.6.5 2023-10-06 10:11:52|
 |phpunit/phpunit|PHPUnit 10.4.2 by Sebastian Bergmann and contributors.|
 |squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.2 (stable) by Squiz (http://www.squiz.net)|

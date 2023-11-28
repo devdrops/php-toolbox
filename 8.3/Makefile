@@ -10,17 +10,17 @@ VERSION := $(shell git describe --tags --always)
 
 # ------------------------------------------------------------------------------------------------------
 develop: ## Build '*-dev' tag, including Xdebug.
-	@echo "Building tag '8.2-dev'"
+	@echo "Building tag '8.3-dev'"
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
 		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=true \
-		-t devdrops/php-toolbox:8.2-dev .
+		-t devdrops/php-toolbox:8.3-dev .
 # ------------------------------------------------------------------------------------------------------
 build: ## Build the official tag.
-	@echo "Building tag '8.2'"
+	@echo "Building tags 'latest' and '8.3'"
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
@@ -28,10 +28,11 @@ build: ## Build the official tag.
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=false \
 		--no-cache \
-		-t devdrops/php-toolbox:8.2 .
+		-t devdrops/php-toolbox:latest \
+		-t devdrops/php-toolbox:8.3 .
 # ------------------------------------------------------------------------------------------------------
 debug: ## Build only the image with Xdebug.
-	@echo "Build tag '8.2-xdebug'"
+	@echo "Build tag '8.3-xdebug'"
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
@@ -39,14 +40,15 @@ debug: ## Build only the image with Xdebug.
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=true \
 		--no-cache \
-		-t devdrops/php-toolbox:8.2-xdebug .
+		-t devdrops/php-toolbox:8.3-xdebug .
 # ------------------------------------------------------------------------------------------------------
 latest: build debug ## Build two images: 1. official tag, 2. official tag + Xdebug.
 # ------------------------------------------------------------------------------------------------------
 push: ## Pushes to Docker Hub two images: 1. official tag, 2. official tag + Xdebug.
-	@echo "Pushing tags '8.2' and '8.2-xdebug'"
-	docker push devdrops/php-toolbox:8.2
-	docker push devdrops/php-toolbox:8.2-xdebug
+	@echo "Pushing tags 'latest', '8.3' and '8.3-xdebug'"
+	docker push devdrops/php-toolbox:latest
+	docker push devdrops/php-toolbox:8.3
+	docker push devdrops/php-toolbox:8.3-xdebug
 # ------------------------------------------------------------------------------------------------------
 release: latest push ## Build and deploy official tags.
 # ------------------------------------------------------------------------------------------------------

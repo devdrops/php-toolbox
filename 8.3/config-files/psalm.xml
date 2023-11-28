@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<psalm
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+
+    errorLevel="1"
+    checkForThrowsDocblock="true"
+    checkForThrowsInGlobalScope="true"
+    ensureArrayIntOffsetsExist="true"
+    ensureArrayStringOffsetsExist="true"
+    findUnusedBaselineEntry="true"
+    findUnusedCode="true"
+    findUnusedVariablesAndParams="true"
+    phpVersion="8.3"
+    reportInfo="true"
+    resolveFromConfigFile="true"
+    runTaintAnalysis="true"
+    threads="10"
+>
+    <forbiddenFunctions>
+        <function name="var_dump" />
+        <function name="echo" />
+        <function name="print" />
+        <function name="printf" />
+        <function name="exit" />
+        <function name="die" />
+        <function name="shell_exec" />
+        <function name="eval" />
+    </forbiddenFunctions>
+</psalm>
