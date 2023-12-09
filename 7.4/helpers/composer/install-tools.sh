@@ -5,7 +5,7 @@
 
 composer global require \
         phpunit/phpunit \
-        squizlabs/php_codesniffer \
+        phpcsstandards/php_codesniffer \
         friendsofphp/php-cs-fixer \
         phpmd/phpmd \
         behat/behat \

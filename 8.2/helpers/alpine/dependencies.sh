@@ -27,8 +27,8 @@ apk add --no-cache \
     gmp-dev=6.2.1-r3 \
     bzip2=1.0.8-r5 \
     bzip2-dev=1.0.8-r5 \
-    curl=8.4.0-r0 \
-    curl-dev=8.4.0-r0 \
+    curl=8.5.0-r0 \
+    curl-dev=8.5.0-r0 \
     libxml2=2.11.6-r0 \
     libxml2-dev=2.11.6-r0 \
     libffi=3.4.4-r2 \
@@ -53,6 +53,8 @@ apk add --no-cache \
     sqlite=3.41.2-r2 \
     sqlite-dev=3.41.2-r2 \
     openssl=3.1.4-r1 \
+    musl=1.2.4-r2 \
+    musl-dev=1.2.4-r2 \
   --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main
 
 # Link libxml

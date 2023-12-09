@@ -14,6 +14,7 @@ apk upgrade
 apk add --no-cache \
     git=2.36.6-r0 \
     zip=3.0-r9 \
+    libzip=1.8.0-r1 \
     libzip-dev=1.8.0-r1 \
     unzip=6.0-r9 \
     autoconf=2.71-r0 \
@@ -25,8 +26,8 @@ apk add --no-cache \
     gmp-dev=6.2.1-r2 \
     bzip2=1.0.8-r1 \
     bzip2-dev=1.0.8-r1 \
-    curl=8.4.0-r0 \
-    curl-dev=8.4.0-r0 \
+    curl=8.5.0-r0 \
+    curl-dev=8.5.0-r0 \
     libxml2-dev=2.9.14-r2 \
     libffi=3.4.2-r1 \
     libffi-dev=3.4.2-r1 \
