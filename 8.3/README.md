@@ -5,19 +5,19 @@
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 8.3.0 (cli) (built: Nov 27 2023 21:52:31) (NTS)|
-|Composer|Composer version 2.6.5 2023-10-06 10:11:52|
-|phpunit/phpunit|PHPUnit 10.4.2 by Sebastian Bergmann and contributors.|
-|squizlabs/php_codesniffer|PHP_CodeSniffer version 3.7.2 (stable) by Squiz (http://www.squiz.net)|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.40.0 I ate three cookies 🍪 by Fabien Potencier and Dariusz Ruminski.|
+|Composer|Composer version 2.6.6 2023-12-08 18:32:26|
+|phpunit/phpunit|PHPUnit 10.5.2 by Sebastian Bergmann and contributors.|
+|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.8.0 (stable) by Squiz and PHPCSStandards|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.41.0 Long Night by Fabien Potencier and Dariusz Ruminski.|
 |phpmd/phpmd|PHPMD 2.14.1|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.45|
-|icanhazstring/composer-unused|0.8.7|
-|vimeo/psalm|Psalm 5.16.0@2897ba636551a8cb61601cc26f6ccfbba6c36591|
-|Rector|Rector 0.18.11|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.48|
+|icanhazstring/composer-unused|0.8.11@4720206|
+|vimeo/psalm|Psalm 5.17.0@c620f6e80d0abfca532b00bda366062aaedf6e5d|
+|Rector|Rector 0.18.12|
 |PHPArkitect|PHPArkitect version 0.3.25|
 |Codeception|Codeception 5.0.12|
-|Infection|Infection - PHP Mutation Testing Framework version 0.27.8|
+|Infection|Infection - PHP Mutation Testing Framework version 0.27.9|
 |Deptrac|deptrac 1.0.2|
 |PhpMetrics|PhpMetrics v2.8.2 <http://www.phpmetrics.org> by Jean-François Lépine <https://twitter.com/Halleck45>|
 
