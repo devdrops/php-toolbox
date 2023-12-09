@@ -25,7 +25,7 @@ For **8.2-xdebug**:
 
 |TOOL|RELEASE|
 |:---|:------|
-|Xdebug|Xdebug v3.2.2, Copyright (c) 2002-2023, by Derick Rethans|
+|Xdebug|Xdebug v3.3.0, Copyright (c) 2002-2023, by Derick Rethans|
 
 ## Important Notes For This Version
 
