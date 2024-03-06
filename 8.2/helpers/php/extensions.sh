@@ -31,5 +31,4 @@ docker-php-ext-install \
     sysvmsg \
     sysvsem \
     sysvshm \
-    zend_test \
     zip
