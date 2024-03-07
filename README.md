@@ -26,28 +26,24 @@ Each PHP version, starting from **7.4**, have at least 2 tags: one version witho
 The following tools are available:
 
 |Tool|Description|
+|:---|:---|
 |[PHP](https://www.php.net/)|The PHP programming language.|
 |[PHPUnit](https://phpunit.de/index.html)|PHPUnit is a programmer-oriented testing framework for PHP.|
-|[PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer/)|PHP_CodeSniffer tokenizes PHP files and detects
-violations of a defined set of coding standards.|
+|[PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer/)|PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.|
 |[PHP CBF](https://phpqa.io/projects/phpcbf.html)|PHP Code Beautifier and Fixer automatically correct coding standard violations.|
 |[PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)|A tool to automatically fix PHP Coding Standards issues.|
-|[PHP Mess Detector](https://phpmd.org/)|Checks for bugs, suboptimal code, overcomplicated expressions, unused
-parameters etc.|
+|[PHP Mess Detector](https://phpmd.org/)|Checks for bugs, suboptimal code, overcomplicated expressions, unused parameters etc.|
 |[Behat](https://docs.behat.org/en/latest/)|A php framework for autotesting your business expectations.|
 |[PHPStan](https://phpstan.org/)|PHPStan finds bugs in your code without writing tests.|
-|[composer-unused](https://github.com/composer-unused/composer-unused)|Show unused composer dependencies by scanning
-your code.|
+|[composer-unused](https://github.com/composer-unused/composer-unused)|Show unused composer dependencies by scanning your code.|
 |[Psalm](https://psalm.dev/)|Prevent runtime errors and fix bugs automatically.|
 |[Pest](https://pestphp.com/)|The elegant PHP testing framework.|
 |[Rector](https://github.com/rectorphp/rector)|Instant Upgrades and Automated Refactoring of any PHP 5.3+ code.|
 |[PHPArkitect](https://github.com/phparkitect/arkitect)|Put your architectural rules under test!|
 |[phpspec](https://phpspec.net/en/stable/)|A php toolset to drive emergent design by specification.|
-|[Codeception](https://codeception.com/)|Codeception collects and shares best practices and solutions for testing PHP
-web applications.|
+|[Codeception](https://codeception.com/)|Codeception collects and shares best practices and solutions for testing PHP web applications.|
 |[Infection](https://infection.github.io/)|PHP Mutation Testing Framework|
-|[Deptrac](https://qossmic.github.io/deptrac/)|Deptrac is a static code analysis tool for PHP that helps you
-communicate, visualize and enforce architectural decisions in your projects.|
+|[Deptrac](https://qossmic.github.io/deptrac/)|Deptrac is a static code analysis tool for PHP that helps you communicate, visualize and enforce architectural decisions in your projects.|
 |[PhpMetrics](https://phpmetrics.org/)|PhpMetrics provides various metrics about PHP projects.|
 |[PDepend](https://pdepend.org/)|PHP_Depend software analyzer and metric tool.|
 
