@@ -3,7 +3,7 @@
 # Composer tools
 #############################################
 
-composer global require \
+composer global require --optimize-autoloader --prefer-stable \
         phpunit/phpunit \
         phpcsstandards/php_codesniffer \
         friendsofphp/php-cs-fixer \
@@ -18,6 +18,7 @@ composer global require \
         codeception/codeception \
         infection/infection \
         qossmic/deptrac-shim \
-        phpmetrics/phpmetrics
+        phpmetrics/phpmetrics \
+        pdepend/pdepend
 
 ln -s -f /root/.composer/vendor/bin/* /usr/local/bin/

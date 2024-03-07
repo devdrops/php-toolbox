@@ -18,6 +18,7 @@ apk add --no-cache \
     libzip-dev \
     unzip \
     autoconf \
+    expat \
     gcc \
     make \
     g++ \
@@ -41,7 +42,10 @@ apk add --no-cache \
     libldap \
     openldap-dev \
     freetds-dev \
+    postgresql14 \
+    postgresql14-dev \
     libpq-dev \
+    sqlite \
     sqlite-dev \
     openssl \
   --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main

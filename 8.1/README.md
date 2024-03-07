@@ -12,14 +12,15 @@
 |phpmd/phpmd|PHPMD 2.15.0|
 |behat/behat|behat 3.13.0|
 |phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.59|
-|icanhazstring/composer-unused|0.8.11@4720206|
 |vimeo/psalm|Psalm 5.22.2@d768d914152dbbf3486c36398802f74e80cfde48|
+|icanhazstring/composer-unused|0.8.11@4720206|
 |Rector|Rector 1.0.2|
 |PHPArkitect|PHPArkitect version 0.3.29|
-|Codeception|Codeception 5.1.1|
+|Codeception|Codeception 5.1.2|
 |Infection|Infection - PHP Mutation Testing Framework version 0.27.10|
 |Deptrac|deptrac 1.0.2|
 |PhpMetrics|PhpMetrics v2.8.2 <http://www.phpmetrics.org> by Jean-François Lépine <https://twitter.com/Halleck45>|
+|PDepend|PDepend 2.16.2|
 
 For **8.1-xdebug**:
 

@@ -18,6 +18,7 @@ apk add --no-cache \
     libzip-dev \
     unzip \
     autoconf \
+    expat \
     gcc \
     make \
     g++ \
@@ -48,11 +49,14 @@ apk add --no-cache \
     freetds \
     freetds-dev \
     linux-headers \
+    postgresql15 \
+    postgresql15-dev \
     libpq \
     libpq-dev \
     sqlite \
     sqlite-dev \
     openssl \
+    openssl-dev \
   --repository=https://dl-cdn.alpinelinux.org/alpine/latest-stable/main
 
 # Link libxml
