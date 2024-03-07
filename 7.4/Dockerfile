@@ -48,3 +48,7 @@ COPY ./config-files/xdebug.ini /config/xdebug/xdebug.ini
 COPY ./config-files/xdebug.log /config/xdebug/xdebug.log
 COPY ./helpers/xdebug/install.sh /config/xdebug/install.sh
 RUN if [ "$INSTALL_XDEBUG" = "true" ]; then sh /config/xdebug/install.sh ; fi
+
+# Swoole
+COPY ./helpers/swoole/install.sh /config/swoole/install.sh
+RUN sh /config/swoole/install.sh
