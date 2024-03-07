@@ -17,7 +17,7 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build 7.4 images
       run: |
         cd ./7.4
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 7.4 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -42,7 +42,7 @@ jobs:
         image: devdrops/php-toolbox:7.4
         args: --file=./7.4/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 7.4-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -65,7 +65,7 @@ jobs:
         image: devdrops/php-toolbox:7.4-xdebug
         args: --file=./7.4/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -76,7 +76,7 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build 8.0 images
       run: |
         cd ./8.0
@@ -91,7 +91,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.0 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -101,7 +101,7 @@ jobs:
         image: devdrops/php-toolbox:8.0
         args: --file=./8.0/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.0-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -124,7 +124,7 @@ jobs:
         image: devdrops/php-toolbox:8.0-xdebug
         args: --file=./8.0/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -135,7 +135,7 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build 8.1 images
       run: |
         cd ./8.1
@@ -150,7 +150,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.1 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -160,7 +160,7 @@ jobs:
         image: devdrops/php-toolbox:8.1
         args: --file=./8.1/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -173,7 +173,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.1-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -183,7 +183,7 @@ jobs:
         image: devdrops/php-toolbox:8.1-xdebug
         args: --file=./8.1/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -194,7 +194,7 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build 8.2 images
       run: |
         cd ./8.2
@@ -209,7 +209,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.2 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -219,7 +219,7 @@ jobs:
         image: devdrops/php-toolbox:8.2
         args: --file=./8.2/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -232,7 +232,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.2-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -242,7 +242,7 @@ jobs:
         image: devdrops/php-toolbox:8.2-xdebug
         args: --file=./8.2/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -253,7 +253,7 @@ jobs:
       actions: read
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build 8.3 images
       run: |
         cd ./8.3
@@ -268,7 +268,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.3 for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -278,7 +278,7 @@ jobs:
         image: devdrops/php-toolbox:8.3
         args: --file=./8.3/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'
 
@@ -291,7 +291,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Run Snyk to check 8.3-xdebug for vulnerabilities
       continue-on-error: false
       uses: snyk/actions/docker@14818c4695ecc4045f33c9cee9e795a788711ca4
@@ -301,6 +301,6 @@ jobs:
         image: devdrops/php-toolbox:8.3-xdebug
         args: --file=./8.3/Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: 'snyk.sarif'

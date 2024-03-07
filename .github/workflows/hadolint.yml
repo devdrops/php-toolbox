@@ -30,7 +30,7 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run hadolint for 7.4
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -39,7 +39,7 @@ jobs:
           output-file: hadolint-7.4-results.sarif
           no-fail: true
       - name: Upload 7.4 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hadolint-7.4-results.sarif
           wait-for-processing: true
@@ -53,7 +53,7 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run hadolint for 8.0
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -62,7 +62,7 @@ jobs:
           output-file: hadolint-8.0-results.sarif
           no-fail: true
       - name: Upload 8.0 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hadolint-8.0-results.sarif
           wait-for-processing: true
@@ -76,7 +76,7 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run hadolint for 8.1
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -85,7 +85,7 @@ jobs:
           output-file: hadolint-8.1-results.sarif
           no-fail: true
       - name: Upload 8.1 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hadolint-8.1-results.sarif
           wait-for-processing: true
@@ -99,7 +99,7 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run hadolint for 8.2
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -108,7 +108,7 @@ jobs:
           output-file: hadolint-8.2-results.sarif
           no-fail: true
       - name: Upload 8.2 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hadolint-8.2-results.sarif
           wait-for-processing: true
@@ -122,7 +122,7 @@ jobs:
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run hadolint for 8.3
         uses: hadolint/hadolint-action@f988afea3da57ee48710a9795b6bb677cc901183
         with:
@@ -131,7 +131,7 @@ jobs:
           output-file: hadolint-8.3-results.sarif
           no-fail: true
       - name: Upload 8.2 analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: hadolint-8.3-results.sarif
           wait-for-processing: true

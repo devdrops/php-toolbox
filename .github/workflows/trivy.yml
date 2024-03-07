@@ -24,7 +24,7 @@ jobs:
     runs-on: "ubuntu-20.04"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build images
         run: |
           cd ./7.4
@@ -46,7 +46,7 @@ jobs:
           format: sarif
           output: 'trivy-results-74.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-74.sarif'
 
@@ -66,7 +66,7 @@ jobs:
           format: sarif
           output: 'trivy-results-74-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-74-xdebug.sarif'
 
@@ -79,7 +79,7 @@ jobs:
     runs-on: "ubuntu-20.04"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build images
         run: |
           cd ./8.0
@@ -101,7 +101,7 @@ jobs:
           format: sarif
           output: 'trivy-results-80.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-80.sarif'
 
@@ -121,7 +121,7 @@ jobs:
           format: sarif
           output: 'trivy-results-80-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-80-xdebug.sarif'
 
@@ -134,7 +134,7 @@ jobs:
     runs-on: "ubuntu-20.04"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build images
         run: |
           cd ./8.1
@@ -156,7 +156,7 @@ jobs:
           format: sarif
           output: 'trivy-results-81.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-81.sarif'
 
@@ -176,7 +176,7 @@ jobs:
           format: sarif
           output: 'trivy-results-81-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-81-xdebug.sarif'
 
@@ -189,7 +189,7 @@ jobs:
     runs-on: "ubuntu-20.04"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build images
         run: |
           cd ./8.2
@@ -211,7 +211,7 @@ jobs:
           format: sarif
           output: 'trivy-results-82.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-82.sarif'
 
@@ -231,7 +231,7 @@ jobs:
           format: sarif
           output: 'trivy-results-82-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-82-xdebug.sarif'
 
@@ -244,7 +244,7 @@ jobs:
     runs-on: "ubuntu-20.04"
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build images
         run: |
           cd ./8.3
@@ -266,7 +266,7 @@ jobs:
           format: sarif
           output: 'trivy-results-83.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-83.sarif'
 
@@ -286,6 +286,6 @@ jobs:
           format: sarif
           output: 'trivy-results-83-xdebug.sarif'
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: 'trivy-results-83-xdebug.sarif'
