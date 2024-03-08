@@ -27,7 +27,7 @@ build: ## Build the official tag.
 		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=false \
-		--no-cache \
+		--no-cache --squash \
 		-t devdrops/php-toolbox:8.1 .
 # ------------------------------------------------------------------------------------------------------
 debug: ## Build only the image with Xdebug.
