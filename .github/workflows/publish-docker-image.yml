@@ -10,8 +10,6 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Docker login
         env:
           DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -23,6 +21,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build and Push 7.4 images
         run: |
           cd ./7.4
@@ -32,6 +32,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build and Push 8.0 images
         run: |
           cd ./8.0
@@ -41,6 +43,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build and Push 8.1 images
         run: |
           cd ./8.1
@@ -50,6 +54,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build and Push 8.2 images
         run: |
           cd ./8.2
@@ -59,6 +65,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Build and Push 8.3 images
         run: |
           cd ./8.3
