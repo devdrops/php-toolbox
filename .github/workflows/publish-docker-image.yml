@@ -20,6 +20,7 @@ jobs:
           docker login -u $DOCKER_USER -p $DOCKER_PASS
 
   build-7_4:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push 7.4 images
@@ -28,6 +29,7 @@ jobs:
           make latest push
 
   build-8_0:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push 8.0 images
@@ -36,6 +38,7 @@ jobs:
           make latest push
 
   build-8_1:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push 8.1 images
@@ -44,6 +47,7 @@ jobs:
           make latest push
 
   build-8_2:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push 8.2 images
@@ -52,6 +56,7 @@ jobs:
           make latest push
 
   build-8_3:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Build and Push 8.3 images
