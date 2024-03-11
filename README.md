@@ -3,6 +3,7 @@
 ![Hadolint status](https://github.com/devdrops/php-toolbox/actions/workflows/hadolint.yml/badge.svg?branch=main)
 ![Trivy status](https://github.com/devdrops/php-toolbox/actions/workflows/trivy.yml/badge.svg?branch=main)
 ![Snyk Container status](https://github.com/devdrops/php-toolbox/actions/workflows/snyk-container.yml/badge.svg?branch=main)
+![Docker Hub status](https://github.com/devdrops/php-toolbox/actions/workflows/publish-docker-image.yml/badge.svg?branch=main)
 
 A Docker image designed for PHP developers that care about code quality.
 
