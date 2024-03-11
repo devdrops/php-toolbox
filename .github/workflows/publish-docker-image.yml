@@ -10,12 +10,11 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Docker login
-        env:
-          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
-        run: |
-          docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
   build-7_4:
     needs: setup
