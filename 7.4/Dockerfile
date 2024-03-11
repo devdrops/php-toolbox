@@ -43,6 +43,5 @@ sh /config/php/extensions.sh
 sh /config/composer/install.sh
 sh /config/composer/config.sh
 sh /config/composer/install-tools.sh
-sh /config/swoole/install.sh
 if [ "$INSTALL_XDEBUG" = "true" ]; then sh /config/xdebug/install.sh ; fi
 EOF
