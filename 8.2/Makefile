@@ -14,7 +14,7 @@ develop: ## Build '*-dev' tag, including Xdebug.
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
-		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
+		--build-arg BUILD_VERSION=8.2-dev \
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=true \
 		-t devdrops/php-toolbox:8.2-dev .
@@ -24,7 +24,7 @@ build: ## Build the official tag.
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
-		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
+		--build-arg BUILD_VERSION=8.2 \
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=false \
 		--no-cache --squash \
@@ -35,7 +35,7 @@ debug: ## Build only the image with Xdebug.
 	docker build \
 		--build-arg VCS_REF=$(GIT_LAST_COMMIT_HASH) \
 		--build-arg BUILD_DATE=$(CURRENT_DATE_GMT) \
-		--build-arg BUILD_VERSION=$(GIT_LAST_COMMIT_HASH) \
+		--build-arg BUILD_VERSION=8.2-xdebug \
 		--build-arg VERSION="$(VERSION)" \
 		--build-arg INSTALL_XDEBUG=true \
 		--no-cache \
