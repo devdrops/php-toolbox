@@ -5,16 +5,16 @@
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 8.0.30 (cli) (built: Oct 21 2023 06:13:34) ( NTS )|
-|Composer|Composer version 2.7.1 2024-02-09 15:26:28|
-|phpunit/phpunit|PHPUnit 9.6.17 by Sebastian Bergmann and contributors.|
-|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.9.0 (stable) by Squiz and PHPCSStandards|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.51.0 Insomnia by Fabien Potencier, Dariusz Ruminski and contributors.|
+|Composer|Composer version 2.7.2 2024-03-11 17:12:18|
+|phpunit/phpunit|PHPUnit 9.6.19 by Sebastian Bergmann and contributors.|
+|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.9.1 (stable) by Squiz and PHPCSStandards|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.52.1 15 Keys by Fabien Potencier, Dariusz Ruminski and contributors.|
 |phpmd/phpmd|PHPMD 2.15.0|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.60|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.66|
 |vimeo/psalm|Psalm 5.22.2@d768d914152dbbf3486c36398802f74e80cfde48|
 |icanhazstring/composer-unused|0.8.11@4720206|
-|Rector|Rector 1.0.2|
+|Rector|Rector 1.0.4|
 |PHPArkitect|PHPArkitect version 0.3.29|
 |Codeception|Codeception 5.1.2|
 |Infection|Infection - PHP Mutation Testing Framework version 0.26.19|

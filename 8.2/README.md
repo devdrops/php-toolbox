@@ -4,20 +4,20 @@
 
 |TOOL|RELEASE|
 |:---|:------|
-|PHP|PHP 8.2.16 (cli) (built: Feb 16 2024 22:19:12) (NTS)|
-|Composer|Composer version 2.7.1 2024-02-09 15:26:28|
-|phpunit/phpunit|PHPUnit 10.5.11 by Sebastian Bergmann and contributors.|
-|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.9.0 (stable) by Squiz and PHPCSStandards|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.51.0 Insomnia by Fabien Potencier, Dariusz Ruminski and contributors.|
+|PHP|PHP 8.2.17 (cli) (built: Mar 16 2024 01:37:40) (NTS)|
+|Composer|Composer version 2.7.2 2024-03-11 17:12:18|
+|phpunit/phpunit|PHPUnit 10.5.17 by Sebastian Bergmann and contributors.|
+|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.9.1 (stable) by Squiz and PHPCSStandards|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.52.1 15 Keys by Fabien Potencier, Dariusz Ruminski and contributors.|
 |phpmd/phpmd|PHPMD 2.15.0|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.60|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.66|
 |icanhazstring/composer-unused|0.8.11@4720206|
-|vimeo/psalm|Psalm 5.22.2@d768d914152dbbf3486c36398802f74e80cfde48|
-|Rector|Rector 1.0.2|
+|vimeo/psalm|Psalm 5.23.1@8471a896ccea3526b26d082f4461eeea467f10a4|
+|Rector|Rector 1.0.4|
 |PHPArkitect|PHPArkitect version 0.3.29|
 |Codeception|Codeception 5.1.2|
-|Infection|Infection - PHP Mutation Testing Framework version 0.27.10|
+|Infection|Infection - PHP Mutation Testing Framework version 0.27.11|
 |Deptrac|deptrac 1.0.2|
 |PhpMetrics|PhpMetrics v2.8.2 <http://www.phpmetrics.org> by Jean-François Lépine <https://twitter.com/Halleck45>|
 |PDepend|PDepend 2.16.2|
