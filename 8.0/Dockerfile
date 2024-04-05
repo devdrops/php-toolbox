@@ -23,8 +23,8 @@ EXPOSE 8081/tcp
 # Helper files
 COPY ./helpers/ /config/
 # Config and/or required files for PHP
-COPY ./config-files/opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
-COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
+COPY ./config-files/opcache/opcache.ini "${PHP_INI_DIR}/conf.d/docker-php-ext-opcache.ini"
+COPY ./config-files/php/php.ini "${PHP_INI_DIR}/conf.d/app.ini"
 # Configuration files
 COPY ./config-files/ /config/
 

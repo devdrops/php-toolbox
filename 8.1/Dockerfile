@@ -20,15 +20,11 @@ EXPOSE 8000/tcp
 EXPOSE 8080/tcp
 EXPOSE 8081/tcp
 
-# Alpine requirements
-COPY ./helpers/alpine/dependencies.sh /config/alpine/dependencies.sh
-RUN sh /config/alpine/dependencies.sh
-
 # Helper files
 COPY ./helpers/ /config/
 # Config and/or required files for PHP
-COPY ./config-files/opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
-COPY ./config-files/error_reporting.ini /usr/local/etc/php/conf.d/error_reporting.ini
+COPY ./config-files/opcache/opcache.ini "${PHP_INI_DIR}/conf.d/docker-php-ext-opcache.ini"
+COPY ./config-files/php/php.ini "${PHP_INI_DIR}/conf.d/app.ini"
 # Configuration files
 COPY ./config-files/ /config/
 
