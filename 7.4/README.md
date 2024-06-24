@@ -5,17 +5,17 @@
 |TOOL|RELEASE|
 |:---|:------|
 |PHP|PHP 7.4.33 (cli) (built: Nov 12 2022 09:17:36) ( NTS )|
-|Composer|Composer version 2.7.2 2024-03-11 17:12:18|
+|Composer|Composer version 2.7.7 2024-06-10 22:11:12|
 |phpunit/phpunit|PHPUnit 9.6.19 by Sebastian Bergmann and contributors.|
-|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.9.1 (stable) by Squiz and PHPCSStandards|
-|friendsofphp/php-cs-fixer|PHP CS Fixer 3.52.1 15 Keys by Fabien Potencier, Dariusz Ruminski and contributors.|
+|phpcsstandards/php_codesniffer|PHP_CodeSniffer version 3.10.1 (stable) by Squiz and PHPCSStandards|
+|friendsofphp/php-cs-fixer|PHP CS Fixer 3.59.3 7th Gear by Fabien Potencier, Dariusz Ruminski and contributors.|
 |phpmd/phpmd|PHPMD 2.15.0|
 |behat/behat|behat 3.13.0|
-|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.10.66|
-|vimeo/psalm|Psalm 5.23.1@8471a896ccea3526b26d082f4461eeea467f10a4|
+|phpstan/phpstan|PHPStan - PHP Static Analysis Tool 1.11.5|
+|vimeo/psalm|Psalm 5.25.0@01a8eb06b9e9cc6cfb6a320bf9fb14331919d505|
 |icanhazstring/composer-unused|0.8.11@4720206|
-|Rector|Rector 1.0.4|
-|PHPArkitect|PHPArkitect version 0.3.29|
+|Rector|Rector 1.1.1|
+|PHPArkitect|PHPArkitect version 0.3.33|
 |phpspec|phpspec 7.5.0|
 |Codeception|Codeception 4.2.2|
 |Infection|Infection - PHP Mutation Testing Framework version 0.26.6|
